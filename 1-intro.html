@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduce Selenium</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>Introduction</li>
+						<li>Configure Selenium WebDriver for Python and Ruby</li>
+						<li>Setting up ChromeDriver for Google Chrome</li>
+						<li>Finding Elements</li>
+						<li>Working with Elements</li>
+						
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Introduction</h2>
+						<p>概述</p>
+					</section>
+					<section>
+						<img src="./images/1-0.png">
+						<a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a>
+
+					</section>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Configure Selenium WebDriver</h2>
+						<p>为 Python 和 Ruby 配置 Selenium WebDriver</p>
+					</section>
+					<section>
+					<h2>For Ruby</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+						1. install Ruby(>= 2 is recommanded , 2.3 is used)
+						2. gem install selenium-webdriver
+					</code></pre>
+					</section>
+					<section>
+					<h2>For Python</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+						1. install Python(either 2 or 3)
+						2. pip install selenium
+					</code></pre>
+					</section>
+					<section>
+					<h2>Just Try!</h2>
+					<a href="./sources/1-intro/just_try.rb">./sources/1-intro/just_try.rb</a>
+					</section>
+				</section>
+
+				<section>
+					<section>
+					<h2>Setting up ChromeDriver for Google Chrome</h2>
+					<p>安装 Chrome 的 WebDrvier(ChromeDriver)</p>	
+					</section>
+					<section>
+						<h2>JsonWireProtocol</h2>
+						<a href="https://w3c.github.io/webdriver/webdriver-spec.html">https://w3c.github.io/webdriver/webdriver-spec.html</a>
+					</section>
+					<section>
+						<h2>ChromeDrvier</h2>
+						<a href="https://chromedriver.storage.googleapis.com/index.html?path=2.27/">https://chromedriver.storage.googleapis.com/index.html?path=2.27/</a>
+					</section>
+					<section>
+						<img src="./images/1-1.png">
+					</section>
+					<section>
+						<h3>How it works</h3>
+						<img src="./images/1-2.png">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Finding Elements</h2>
+						<p>节点查找</p>
+					</section>
+					<section>
+						<table >
+							
+							<tr>
+							    <td>By_ID</td>
+							    <td><pre>.find_ element(id: , *element_id*)</pre></td>
+							</tr>
+							<tr>
+							    <td>By_Name</td>
+							    <td><pre>.find_ element(name: , *element_name*)</pre></td>
+							</tr>
+							<tr>
+							    <td>By_ClassName</td>
+							    <td><pre>.find_ element(class: , *class_name*)</pre></td>
+							</tr>
+							<tr>
+							    <td>By_TagName</td>
+							    <td><pre>.find_ element(tag_name: , *tag_name*)</pre></td>
+							</tr>
+							<tr>
+							    <td>By_LinkText</td>
+							    <td><pre>.find_ element(link_text: , *linke_text*)</pre></td>
+							</tr>
+							<tr>
+							    <td>By_PartialLinkText</td>
+							    <td><pre>.find_ element(partial_link_text: , *partial_link_text*)</pre></td>
+							</tr>
+							<tr>
+							    <td>By_CSS</td>
+							    <td><pre>.find_ element(css: , *css_selector*)</pre></td>
+							</tr>
+							<tr>
+							    <td>By_XPath</td>
+							    <td><pre>.find_ element(xpath: , *xpath*)</pre></td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<ul>
+							<li><a href="./sources/1-intro/find_element.rb">./sources/1-intro/find_element.rb</a></li>
+							<li><a href="./sources/1-intro/jquery.rb">./sources/1-intro/jquery.rb</a></li>
+							<li><a href="./sources/1-intro/load_jquery.rb">./sources/1-intro/load_jquery.rb</a></li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Working with Elements</h2>
+						<p>节点操作</p>
+					</section>
+					<section>
+						<h2>Common Elements</h2>
+						<p>Selenium::WebDriver::Element</p>
+						<ul>
+							<li>.text</li>
+							<li>.attribute</li>
+							<li>.css_value</li>
+							<li>.clear</li>
+							<li>.sendKeys</li>
+							<li>.submit</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2>Select Tag</h2>
+						<p>Selenium::WebDriver::Support::Select</p>
+						<pre><code>
+select.select_by(:value, "Honda")
+assert_equal "Honda", select.first_selected_option.text
+						</code></pre>
+						<a href="./sources/1-intro/select.rb">./sources/1-intro/select.rb</a>
+					</section>
+					<section>
+						<h2>Radio and Checkbox</h2>
+						<a href="./sources/1-intro/radio_and_checkbox.rb">./sources/1-intro/radio_and_checkbox.rb</a>
+					</section>
+					
+					<section>
+						<h2>Actions</h2>
+						<p>Selenium::WebDriver::ActionBuilder</p>
+						<pre>
+							<code>
+driver.action.key_down(:shift).
+	click(element).
+	click(second_element).
+	key_up(:shift).
+	drag_and_drop(element, third_element).
+	perform
+							</code>
+						</pre>
+						<ul>
+							<li><a href="./sources/1-intro/click.rb">./sources/1-intro/click.rb</a></li>
+							<li><a href="./sources/1-intro/drag_and_drop.rb">./sources/1-intro/drag_and_drop.rb</a></li>
+						</ul>
+					</section>
+
+				</section>
+				
+				
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

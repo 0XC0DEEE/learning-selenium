@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CSS选择器</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>Introduction</li>
+						<li>CSS</li>
+						<li>Use Chrome DevTool</li>
+						<li>Use Case</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Introduction</h3>
+					<img src="./images/0-1.png">
+				</section>
+				<section>
+					<a href="http://www.w3school.com.cn/cssref/css_selectors.ASP">http://www.w3school.com.cn/cssref/css_selectors.ASP</a>
+				</section>
+				<section>
+					<h2>Use Chrome DevTool</h2>
+					<p>使用 Chrome 开发者工具快速找到 CSS 选择器</p>
+				</section>
+				<section>
+					<h2>Use Case</h2>
+					<h3>Find Element(s)</h3>
+					<ul>
+						<li>write style, render HTML</li>
+						<li>automation testing/mock user behavior</li>
+						<li>extract data(use in crawler)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>资料</h2>
+					<ul>
+						<li><a href="https://segmentfault.com/a/1190000003088878">玩转CSS选择器（一） 之 使用方法介绍</a></li>
+						<li><a href="https://segmentfault.com/a/1190000003503374">玩转CSS选择器（二） 之 浏览器支持，常见Bug，性能优化</a></li>
+						<li><a href="http://css4-selectors.com/selectors/">http://css4-selectors.com/selectors/</a></li>
+					</ul>
+					
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
